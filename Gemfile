@@ -67,5 +67,3 @@ end
 gem "devise", "~> 4.9"
 
 gem "foreman", "~> 0.88.1", group: :development
-
-gem "sqlite3", "~> 2.6", group: :development
