@@ -43,3 +43,34 @@
 1. User logs in via **Devise** → now `current_user` is available.
 2. **Rolify** tells us that `current_user` has the role `:admin`.
 3. **Pundit** uses that role to check whether `current_user` is allowed to access a specific resource or action.
+
+## Diagram
+
+```mermaid
+classDiagram
+   IAM <|-- Devise
+   IAM <|-- Pundit
+   IAM <|-- Rolify
+   IAM : +Authentication()
+   IAM : +Authorization()
+   IAM : +RoleManagement()
+
+   class Devise{
+         +sign_up()
+         +login()
+         +logout()
+         +reset_password()
+   }
+
+   class Pundit{
+         +authorize()
+         +policy()
+         +scope()
+   }
+
+   class Rolify{
+         +add_role()
+         +has_role()
+         +remove_role()
+   }
+```
