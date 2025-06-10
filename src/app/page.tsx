@@ -1,9 +1,7 @@
-import Dashboard from '@/dashboard/Dashboard';
+import MarketingPage from "@/marketing-page/MarketingPage";
 
 export default function Page() {
   return (
-    <>
-      <Dashboard />
-    </>
+    <MarketingPage disableCustomTheme={false} />
   );
 }
